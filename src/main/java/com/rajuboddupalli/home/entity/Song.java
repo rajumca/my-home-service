@@ -1,4 +1,4 @@
-package com.rajuboddupalli.home.model;
+package com.rajuboddupalli.home.entity;
 
 public class Song {
     private String name;

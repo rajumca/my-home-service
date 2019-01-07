@@ -1,6 +1,4 @@
-package com.rajuboddupalli.home.model;
-
-import java.time.LocalDate;
+package com.rajuboddupalli.home.entity;
 
 public class Transaction {
     private String date;

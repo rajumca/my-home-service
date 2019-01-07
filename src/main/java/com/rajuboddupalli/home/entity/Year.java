@@ -1,4 +1,4 @@
-package com.rajuboddupalli.home.model;
+package com.rajuboddupalli.home.entity;
 
 import java.util.List;
 

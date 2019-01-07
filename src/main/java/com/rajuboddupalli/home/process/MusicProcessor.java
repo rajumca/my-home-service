@@ -2,7 +2,7 @@ package com.rajuboddupalli.home.process;
 
 import com.rajuboddupalli.home.function.AlbumConverter;
 import com.rajuboddupalli.home.utils.SubDirectoryUtils;
-import com.rajuboddupalli.home.model.Album;
+import com.rajuboddupalli.home.entity.Album;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;

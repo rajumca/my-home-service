@@ -4,14 +4,15 @@ import com.mpatric.mp3agic.ID3v2;
 import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.Mp3File;
 import com.mpatric.mp3agic.UnsupportedTagException;
-import com.rajuboddupalli.home.model.Album;
-import com.rajuboddupalli.home.model.Song;
+import com.rajuboddupalli.home.entity.Album;
+import com.rajuboddupalli.home.entity.Song;
 import com.rajuboddupalli.home.utils.SubDirectoryUtils;
 
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,7 +23,7 @@ public class AlbumConverter implements PathConverter<Album> {
         album.setName(path.getFileName().toString());
         album.setPath(path.toString());
         setSongs(path, album);
-        //setAlbumProperties(album);
+        setAlbumProperties(album);
         if (album.getYear() == 0) {
             setYear(album);
         }
