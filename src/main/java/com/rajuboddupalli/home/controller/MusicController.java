@@ -1,8 +1,7 @@
 package com.rajuboddupalli.home.controller;
 
 import com.rajuboddupalli.home.entity.Album;
-import com.rajuboddupalli.home.process.MusicProcessor;
-import com.rajuboddupalli.home.repository.AlbumRepository;
+import com.rajuboddupalli.home.repository.MusicDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,21 +15,18 @@ import java.util.List;
 @RestController
 @RequestMapping("albums")
 public class MusicController {
-    @Autowired
-    private MusicProcessor musicProcessor;
 
     @Autowired
-    private AlbumRepository albumRepository;
+    private MusicDAO musicDAO;
 
     @GetMapping("insert")
     public List<Album> getAndInset() throws IOException {
-        List<Album> albums = musicProcessor.getAlbums();
-        albumRepository.insert(albums);
-        return albums;
+        return musicDAO.insert();
     }
+
     @GetMapping
     public List<Album> getAlbums() throws IOException {
-        return albumRepository.findAll();
+        return musicDAO.findAll();
     }
 
 }

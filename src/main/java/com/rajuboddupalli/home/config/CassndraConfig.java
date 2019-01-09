@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.cassandra.config.AbstractCassandraConfiguration;
 import org.springframework.data.cassandra.config.CassandraClusterFactoryBean;
+import org.springframework.data.cassandra.config.SchemaAction;
 import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
 
 @Configuration
@@ -22,9 +23,15 @@ public class CassndraConfig extends AbstractCassandraConfiguration {
         cluster.setJmxReportingEnabled(false);
         return cluster;
     }
+
     @Override
     public String[] getEntityBasePackages() {
-        return new String[] {"com.rajuboddupalli.home.entity"};
+        return new String[]{"com.rajuboddupalli.home.entity"};
+    }
+
+    @Override
+    public SchemaAction getSchemaAction() {
+        return SchemaAction.CREATE_IF_NOT_EXISTS;
     }
 
 }
