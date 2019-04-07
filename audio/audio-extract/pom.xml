@@ -6,43 +6,31 @@
         <artifactId>myhome</artifactId>
         <groupId>com.rajuboddupalli</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>audio-web</artifactId>
+    <artifactId>audio-extract</artifactId>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+            <version>2.2.5.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>com.rajuboddupalli</groupId>
             <artifactId>music-objects</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.rajuboddupalli</groupId>
-            <artifactId>finance-objects</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>com.mpatric</groupId>
+            <artifactId>mp3agic</artifactId>
+            <version>0.9.1</version>
         </dependency>
         <dependency>
             <groupId>com.rajuboddupalli</groupId>
             <artifactId>audio-store</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.rajuboddupalli</groupId>
-            <artifactId>audio-extract</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.rajuboddupalli</groupId>
-            <artifactId>finance-processor</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.rajuboddupalli</groupId>
-            <artifactId>audio-processor</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
