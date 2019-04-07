@@ -3,7 +3,6 @@ package com.rajuboddupalli.home.music.repository;
 
 import com.rajuboddupalli.home.music.entity.domain.Album;
 import com.rajuboddupalli.home.music.entity.domain.Song;
-import com.rajuboddupalli.home.music.processor.MusicProcessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,8 +13,6 @@ import java.util.stream.Collectors;
 @Component
 public class MusicDAO {
 
-    @Autowired
-    private MusicProcessor musicProcessor;
 
     @Autowired
     private AlbumRepository albumRepository;

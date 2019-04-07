@@ -1,10 +1,8 @@
 package com.rajuboddupalli.home.music.processor;
 
-import com.rajuboddupalli.home.music.converter.AlbumConverter;
 import com.rajuboddupalli.home.music.entity.domain.Album;
 import com.rajuboddupalli.home.music.publisher.ExtractPublisher;
 import com.rajuboddupalli.home.music.repository.MusicDAO;
-import com.rajuboddupalli.home.music.utils.SubDirectoryUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -21,7 +19,7 @@ import java.util.stream.StreamSupport;
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 @Component
-public class MusicProcessor2 {
+public class MusicProcessor {
     @Autowired
     private MusicDAO musicDAO;
 
@@ -48,6 +46,7 @@ public class MusicProcessor2 {
         System.out.println(LocalDate.now());
         System.out.println(LocalDateTime.now());
     }
+
 
 
 }

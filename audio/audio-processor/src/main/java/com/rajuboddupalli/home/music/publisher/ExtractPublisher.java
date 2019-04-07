@@ -13,7 +13,7 @@ public class ExtractPublisher {
   private KafkaTemplate<String,String> kafkaTemplate2;
 
     public void publish(String message){
-      kafkaTemplate.send("test", message);
+      kafkaTemplate.send("MYHOME.MUSIC.EXTRACT", message);
     }
   public void publishTest(String message){
     kafkaTemplate2.send("test", message);

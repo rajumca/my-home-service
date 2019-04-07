@@ -1,9 +1,8 @@
 package com.rajuboddupalli.home.controller;
 
 import com.rajuboddupalli.home.music.entity.domain.Album;
-import com.rajuboddupalli.home.music.processor.MusicProcessor2;
-import com.rajuboddupalli.home.music.repository.MusicDAO;
 import com.rajuboddupalli.home.music.processor.MusicProcessor;
+import com.rajuboddupalli.home.music.repository.MusicDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,13 +22,11 @@ public class MusicController {
 
     @Autowired
     private MusicProcessor musicProcessor;
-    @Autowired
-    private MusicProcessor2 musicProcessor2;
 
 
     @GetMapping("extract")
     public void extract() throws IOException {
-        musicProcessor2.extract();
+        musicProcessor.extract();
       //  return musicDAO.insert();
     }
 
@@ -39,7 +36,7 @@ public class MusicController {
         //return musicDAO.findAll();
        //return musicProcessor2.test();
 
-        return musicProcessor2.getAlbums();
+        return musicProcessor.getAlbums();
     }
     @GetMapping("copy")
     public void copy() throws IOException {

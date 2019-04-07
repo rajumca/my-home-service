@@ -12,7 +12,7 @@ public class MessageReceiver {
     @Autowired
     private AlbumExtractor albumExtractor;
 
-    @KafkaListener(topics = "test", groupId = "myhome")
+    @KafkaListener(topics = "MYHOME.MUSIC.EXTRACT", groupId = "myhome")
     public void receieveMessage(String message) {
         albumExtractor.extract(message);
     }
