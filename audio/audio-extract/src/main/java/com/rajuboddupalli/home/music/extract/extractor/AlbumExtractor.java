@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Component
@@ -27,7 +28,8 @@ public class AlbumExtractor {
         storeMessagePublisher.publish(album);
        // musicDAO.insert(album);
 
-        System.out.println("Processed: " + counter.getAndIncrement());
+        System.out.print("Processed: " + counter.getAndIncrement()+ ":"+LocalDateTime.now()+",");
+
 
     }
 }

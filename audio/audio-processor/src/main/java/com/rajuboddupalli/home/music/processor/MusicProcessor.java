@@ -27,7 +27,8 @@ public class MusicProcessor {
     private ExtractMessagePublisher extractPublisher;
 
     public void extract() {
-        Path musicPath = Paths.get("G:\\new songs");
+        System.out.println("Processor:** "+LocalDateTime.now());
+        Path musicPath = Paths.get("G:\\MUSIC");
         try (DirectoryStream<Path> paths = Files.newDirectoryStream(musicPath)) {
             StreamSupport.stream(paths.spliterator(), true).forEach(path -> extractPublisher.publish(path.toString()));
         } catch (IOException e) {
