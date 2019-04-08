@@ -1,4 +1,4 @@
-package com.rajuboddupalli.home.music.config;
+package com.rajuboddupalli.home.music.store.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -8,7 +8,7 @@ import org.springframework.data.cassandra.config.SchemaAction;
 import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
 
 @Configuration
-@EnableCassandraRepositories(basePackages = "com.rajuboddupalli.home.music.repository")
+@EnableCassandraRepositories(basePackages = "com.rajuboddupalli.home.music.store.repository")
 public class CassndraConfig extends AbstractCassandraConfiguration {
     @Override
     protected String getKeyspaceName() {
@@ -26,7 +26,7 @@ public class CassndraConfig extends AbstractCassandraConfiguration {
 
     @Override
     public String[] getEntityBasePackages() {
-        return new String[]{"com.rajuboddupalli.home.music.entity"};
+        return new String[]{"com.rajuboddupalli.home.music.entity.domain"};
     }
 
     @Override

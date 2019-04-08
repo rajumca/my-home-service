@@ -2,7 +2,7 @@ package com.rajuboddupalli.home.controller;
 
 import com.rajuboddupalli.home.music.entity.domain.Album;
 import com.rajuboddupalli.home.music.processor.MusicProcessor;
-import com.rajuboddupalli.home.music.repository.MusicDAO;
+import com.rajuboddupalli.home.music.store.repository.MusicDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

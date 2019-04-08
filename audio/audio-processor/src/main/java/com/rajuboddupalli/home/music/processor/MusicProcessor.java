@@ -1,8 +1,8 @@
 package com.rajuboddupalli.home.music.processor;
 
 import com.rajuboddupalli.home.music.entity.domain.Album;
-import com.rajuboddupalli.home.music.publisher.ExtractPublisher;
-import com.rajuboddupalli.home.music.repository.MusicDAO;
+import com.rajuboddupalli.home.music.publisher.ExtractMessagePublisher;
+import com.rajuboddupalli.home.music.store.repository.MusicDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -24,7 +24,7 @@ public class MusicProcessor {
     private MusicDAO musicDAO;
 
     @Autowired
-    private ExtractPublisher extractPublisher;
+    private ExtractMessagePublisher extractPublisher;
 
     public void extract() {
         Path musicPath = Paths.get("G:\\new songs");

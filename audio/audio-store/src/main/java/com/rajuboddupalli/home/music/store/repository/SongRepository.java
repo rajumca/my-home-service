@@ -1,4 +1,4 @@
-package com.rajuboddupalli.home.music.repository;
+package com.rajuboddupalli.home.music.store.repository;
 
 
 import com.rajuboddupalli.home.music.entity.domain.Song;
