@@ -1,6 +1,8 @@
 package com.rajuboddupalli.home.music.processor;
 
+import com.rajuboddupalli.home.common.utils.DirectoryUtils;
 import com.rajuboddupalli.home.music.entity.domain.Album;
+import com.rajuboddupalli.home.music.publisher.CopyMessagePublisher;
 import com.rajuboddupalli.home.music.publisher.ExtractMessagePublisher;
 import com.rajuboddupalli.home.music.store.repository.MusicDAO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,12 +13,10 @@ import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.stream.StreamSupport;
-
-import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 @Component
 public class MusicProcessor {
@@ -26,8 +26,11 @@ public class MusicProcessor {
     @Autowired
     private ExtractMessagePublisher extractPublisher;
 
+    @Autowired
+    private CopyMessagePublisher copyMessagePublisher;
+
     public void extract() {
-        System.out.println("Processor:** "+LocalDateTime.now());
+        System.out.println("Processor:** " + LocalDateTime.now());
         Path musicPath = Paths.get("G:\\MUSIC");
         try (DirectoryStream<Path> paths = Files.newDirectoryStream(musicPath)) {
             StreamSupport.stream(paths.spliterator(), true).forEach(path -> extractPublisher.publish(path.toString()));
@@ -41,13 +44,17 @@ public class MusicProcessor {
         return musicDAO.findAll();
     }
 
-    public void copy(String path) throws IOException {
-        System.out.println(LocalDateTime.now());
-        Files.copy(Paths.get("G:\\MUSIC\\1 - Nenokkadine (2014) ~ 320 VBR\\01 - Who R U.mp3"), Paths.get("G:\\temp\\01 - Who R U.mp3"), REPLACE_EXISTING);
-        System.out.println(LocalDate.now());
-        System.out.println(LocalDateTime.now());
+    public void copy(String filePathString, String targetFolder) throws IOException {
+        publish(Paths.get(filePathString), targetFolder);
     }
 
+    private void publish(Path path, String targetFolder) {
+        if (Files.isDirectory(path)) {
+            DirectoryUtils.forEachFile(path, subPath->publish(subPath,targetFolder));
+        } else {
+            copyMessagePublisher.publish(path.toString(), targetFolder);
+        }
+    }
 
 
 }

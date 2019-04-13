@@ -17,6 +17,7 @@
         <module>audio/audio-extract</module>
         <module>audio/audio-store</module>
         <module>audio/audio-processor</module>
+        <module>common-modules/common-utils</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

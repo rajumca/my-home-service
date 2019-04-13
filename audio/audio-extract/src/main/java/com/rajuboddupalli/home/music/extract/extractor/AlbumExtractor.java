@@ -26,8 +26,6 @@ public class AlbumExtractor {
 
         Album album = new AlbumConverter().convert(Paths.get(path));
         storeMessagePublisher.publish(album);
-       // musicDAO.insert(album);
-
         System.out.print("Processed: " + counter.getAndIncrement()+ ":"+LocalDateTime.now()+",");
 
 

@@ -14,7 +14,4 @@ public class ExtractMessagePublisher {
     public void publish(String message){
       kafkaTemplate.send("MYHOME.MUSIC.EXTRACT", message);
     }
-  public void publishTest(String message){
-    kafkaTemplate.send("test", message);
-  }
 }

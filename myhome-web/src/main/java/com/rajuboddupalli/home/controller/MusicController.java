@@ -27,20 +27,16 @@ public class MusicController {
     @GetMapping("extract")
     public void extract() throws IOException {
         musicProcessor.extract();
-      //  return musicDAO.insert();
     }
 
 
     @GetMapping
     public List<Album> getAlbums() throws IOException {
-        //return musicDAO.findAll();
-       //return musicProcessor2.test();
-
         return musicProcessor.getAlbums();
     }
     @GetMapping("copy")
     public void copy() throws IOException {
-         musicProcessor.copy("");
+         musicProcessor.copy("G:\\new songs","G:\\temp");
     }
     @GetMapping(value = "read",produces = "audio/mpeg")
     public List<String> getSOng(String path) throws IOException {

@@ -8,14 +8,15 @@ import org.springframework.stereotype.Component;
 import java.io.IOException;
 
 @Component
-public class MessageReceiver {
+public class ExtractMessageReceiver {
     @Autowired
     private AlbumExtractor albumExtractor;
 
     @KafkaListener(topics = "MYHOME.MUSIC.EXTRACT", groupId = "myhome")
-    public void receieveMessage(String message) {
+    public void receieveExtractMessage(String message) {
         albumExtractor.extract(message);
     }
+
 }
 
 
