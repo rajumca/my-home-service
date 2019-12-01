@@ -10,9 +10,6 @@ public class ExtractMessagePublisher {
   private KafkaTemplate<String,String> kafkaTemplate;
 
     public void publish(String message){
-      kafkaTemplate.send("MYHOME.MUSIC.EXTRACT", message);
+      kafkaTemplate.send("MYHOME.TOPIC.MUSIC.EXTRACT", message);
     }
-  public void publishTest(String message){
-    kafkaTemplate.send("test", message);
-  }
 }

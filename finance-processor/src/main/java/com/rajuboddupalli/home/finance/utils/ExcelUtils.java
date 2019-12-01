@@ -26,9 +26,8 @@ public class ExcelUtils {
     Workbook workbook;
 
     public ExcelUtils() throws IOException {
-        try (FileInputStream fileInputStream = new FileInputStream(new File("F:\\XL\\My Finance.xlsx"))) {
+        try (FileInputStream fileInputStream = new FileInputStream(new File("F:\\Documents\\Finance\\My Finance.xlsx"))) {
             workbook = new XSSFWorkbook(fileInputStream);
-
         }
     }
 
@@ -41,11 +40,12 @@ public class ExcelUtils {
         Summary summary = new Summary();
         summary.setTotal(getNumber(getSheetAt(0), 1, 1));
         List<Year> years = new ArrayList<>();
-
-        Sheet y2018 = workbook.getSheetAt(1);
-        Sheet y2017 = workbook.getSheetAt(2);
-        Sheet y2016 = workbook.getSheetAt(3);
-        Sheet y2015 = workbook.getSheetAt(4);
+        Sheet y2019 = workbook.getSheetAt(1);
+        Sheet y2018 = workbook.getSheetAt(2);
+        Sheet y2017 = workbook.getSheetAt(3);
+        Sheet y2016 = workbook.getSheetAt(4);
+        Sheet y2015 = workbook.getSheetAt(5);
+        years.add(getYear(y2019));
         years.add(getYear(y2018));
         years.add(getYear(y2017));
         years.add(getYear(y2016));
@@ -65,7 +65,7 @@ public class ExcelUtils {
             int rowNum = row.getRowNum();
             if (rowNum != 0) {
                 Transaction transaction = getTransaction(row);
-                if(transaction.getDate()==null||transaction.getDate().equals("")){
+                if (transaction.getDate() == null || transaction.getDate().equals("")) {
                     break;
                 }
                 transactions.add(transaction);
@@ -82,8 +82,8 @@ public class ExcelUtils {
         }
         Transaction transaction = new Transaction();
         transaction.setDate(getDate(row));
-        transaction.setUsd(getStringValue(row,1));
-        transaction.setInr(getStringValue(row,2));
+        transaction.setUsd(getStringValue(row, 1));
+        transaction.setInr(getStringValue(row, 2));
         transaction.setSentTo(getTextValue(row, 3));
         return transaction;
     }
@@ -98,7 +98,7 @@ public class ExcelUtils {
 //            } else if (cell.getCellTypeEnum() == CellType.STRING) {
 //                return cell.getStringCellValue();
 //            }
-             SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
             String format = sdf.format(cell.getDateCellValue());
             return format;
         } catch (Exception e) {
@@ -107,7 +107,7 @@ public class ExcelUtils {
         return "";
     }
 
-    private String getStringValue(Row row,int  index) {
+    private String getStringValue(Row row, int index) {
         Cell cell = row.getCell(index);
         if (cell == null) {
             return "";
@@ -117,12 +117,12 @@ public class ExcelUtils {
         return new Double(numericCellValue).toString();
     }
 
-    private String getTextValue(Row row,int  index) {
+    private String getTextValue(Row row, int index) {
         Cell cell = row.getCell(index);
         if (cell == null) {
             return "";
         }
-       return cell.getStringCellValue();
+        return cell.getStringCellValue();
     }
 
     private Sheet getSheetAt(int i) {

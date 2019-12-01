@@ -1,6 +1,5 @@
 package com.rajuboddupalli.home.music.extract.extractor;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.rajuboddupalli.home.music.entity.domain.Album;
 import com.rajuboddupalli.home.music.extract.converter.AlbumConverter;
 import com.rajuboddupalli.home.music.extract.publisher.StoreMessagePublisher;
@@ -9,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Component
@@ -25,9 +25,8 @@ public class AlbumExtractor {
 
         Album album = new AlbumConverter().convert(Paths.get(path));
         storeMessagePublisher.publish(album);
-       // musicDAO.insert(album);
+        System.out.print("Processed: " + counter.getAndIncrement()+ ":"+LocalDateTime.now()+",");
 
-        System.out.println("Processed: " + counter.getAndIncrement());
 
     }
 }

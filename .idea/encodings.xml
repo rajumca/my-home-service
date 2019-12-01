@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/audio/audio-extract" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/audio/audio-processor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-modules/common-utils" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common-modules/file-copy-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-store" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain-objects/common-objects" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain-objects/finance-objects" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/domain-objects/media-objects" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/finance-processor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/myhome-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photo/photo-extracter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/photo/photo-initializer" charset="UTF-8" />
+  </component>
+</project>

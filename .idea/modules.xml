@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/audio/audio-extract/audio-extract.iml" filepath="$PROJECT_DIR$/audio/audio-extract/audio-extract.iml" />
+      <module fileurl="file://$PROJECT_DIR$/audio/audio-processor/audio-processor.iml" filepath="$PROJECT_DIR$/audio/audio-processor/audio-processor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myhome-web/audio-web.iml" filepath="$PROJECT_DIR$/myhome-web/audio-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain-objects/common-objects/common-objects.iml" filepath="$PROJECT_DIR$/domain-objects/common-objects/common-objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-modules/common-utils/common-utils.iml" filepath="$PROJECT_DIR$/common-modules/common-utils/common-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data-store/data-store.iml" filepath="$PROJECT_DIR$/data-store/data-store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-modules/file-copy-service/file-copy-service.iml" filepath="$PROJECT_DIR$/common-modules/file-copy-service/file-copy-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain-objects/finance-objects/finance-objects.iml" filepath="$PROJECT_DIR$/domain-objects/finance-objects/finance-objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/finance-processor/finance-processor.iml" filepath="$PROJECT_DIR$/finance-processor/finance-processor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/domain-objects/media-objects/media-objects.iml" filepath="$PROJECT_DIR$/domain-objects/media-objects/media-objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myhome.iml" filepath="$PROJECT_DIR$/myhome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/photo/photo-extracter/photo-extracter.iml" filepath="$PROJECT_DIR$/photo/photo-extracter/photo-extracter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/photo/photo-initializer/photo-initializer.iml" filepath="$PROJECT_DIR$/photo/photo-initializer/photo-initializer.iml" />
+    </modules>
+  </component>
+</project>
