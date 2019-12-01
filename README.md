@@ -5,7 +5,7 @@ Startup:
 1.  bin/windows/zookeeper-server-start.bat config/zookeeper.properties
 2.  bin/windows/kafka-server-start.bat config/server.properties
 3.  bin/cassandra -f
-Run CQL scripts: file://cql-script.cql
+4. Run CQL scripts: file://cql-script.cql
 
  2  bin/windows/kafka-topics.bat --list --bootstrap-server localhost:9092
  3  bin/windows/kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic MYHOME.TOPIC.MUSIC.EXTRACT
