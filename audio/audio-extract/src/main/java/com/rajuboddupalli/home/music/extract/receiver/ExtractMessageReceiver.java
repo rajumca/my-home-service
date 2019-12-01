@@ -5,14 +5,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
-
 @Component
 public class ExtractMessageReceiver {
     @Autowired
     private AlbumExtractor albumExtractor;
 
-    @KafkaListener(topics = "MYHOME.MUSIC.EXTRACT", groupId = "myhome")
+    @KafkaListener(topics = "MYHOME.TOPIC.MUSIC.EXTRACT", groupId = "myhome")
     public void receieveExtractMessage(String message) {
         albumExtractor.extract(message);
     }

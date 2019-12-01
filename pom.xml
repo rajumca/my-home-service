@@ -8,22 +8,34 @@
     <artifactId>myhome</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-    <modules>
+    <properties>
+        <jackson.version>2.9.10</jackson.version>
+        <lombok.version>1.18.10</lombok.version>
+        <slf4j.version>1.7.28</slf4j.version>
 
+        <spring-kafka.version>2.2.5.RELEASE</spring-kafka.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+    </properties>
+    <modules>
         <module>myhome-web</module>
         <module>finance-processor</module>
         <module>domain-objects/finance-objects</module>
-        <module>domain-objects/music-objects</module>
+        <module>domain-objects/common-objects</module>
         <module>audio/audio-extract</module>
-        <module>audio/audio-store</module>
+        <module>data-store</module>
         <module>audio/audio-processor</module>
         <module>common-modules/common-utils</module>
+        <module>photo/photo-initializer</module>
+        <module>photo/photo-extracter</module>
+        <module>common-modules/file-copy-service</module>
+        <module>domain-objects/media-objects</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.1.RELEASE</version>
+        <version>2.1.9.RELEASE</version>
     </parent>
-
 
 </project>

@@ -1,0 +1,9 @@
+CREATE TABLE keyspace1.image_audit (
+	name text,
+	migration_status text,
+	destination text,
+	month text,
+	path text,
+	year text,
+	PRIMARY KEY (name)
+);

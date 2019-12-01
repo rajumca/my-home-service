@@ -1,6 +1,5 @@
 package com.rajuboddupalli.home.music.extract.extractor;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.rajuboddupalli.home.music.entity.domain.Album;
 import com.rajuboddupalli.home.music.extract.converter.AlbumConverter;
 import com.rajuboddupalli.home.music.extract.publisher.StoreMessagePublisher;

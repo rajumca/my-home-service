@@ -32,11 +32,12 @@ public class MusicController {
 
     @GetMapping
     public List<Album> getAlbums() throws IOException {
+
         return musicProcessor.getAlbums();
     }
-    @GetMapping("copy")
-    public void copy() throws IOException {
-         musicProcessor.copy("G:\\new songs","G:\\temp");
+    @PostMapping("copy")
+    public void copy(@RequestBody String filePath) throws IOException {
+         musicProcessor.copy(filePath,"G:\\temp");
     }
     @GetMapping(value = "read",produces = "audio/mpeg")
     public List<String> getSOng(String path) throws IOException {
