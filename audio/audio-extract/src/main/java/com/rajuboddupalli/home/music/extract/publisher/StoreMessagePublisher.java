@@ -4,10 +4,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rajuboddupalli.home.common.domain.StorageType;
 import com.rajuboddupalli.home.common.domain.StoreObject;
-import com.rajuboddupalli.home.music.entity.domain.Album;
+import com.rajuboddupalli.home.domain.entity.music.Album;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
+
 
 @Component
 public class StoreMessagePublisher {

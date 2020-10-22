@@ -1,7 +1,7 @@
 package com.rajuboddupalli.home.music.extract.utils;
 
-import com.rajuboddupalli.home.music.entity.domain.Album;
-import com.rajuboddupalli.home.music.entity.domain.Song;
+import com.rajuboddupalli.home.domain.entity.music.Album;
+import com.rajuboddupalli.home.domain.entity.music.Song;
 import com.rajuboddupalli.home.music.extract.converter.SongConverter;
 
 import java.io.IOException;

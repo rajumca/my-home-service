@@ -1,7 +1,7 @@
 package com.rajuboddupalli.home.music.processor;
 
 import com.rajuboddupalli.home.common.utils.DirectoryUtils;
-import com.rajuboddupalli.home.music.entity.domain.Album;
+import com.rajuboddupalli.home.domain.entity.music.Album;
 import com.rajuboddupalli.home.music.publisher.CopyMessagePublisher;
 import com.rajuboddupalli.home.music.publisher.ExtractMessagePublisher;
 import com.rajuboddupalli.home.music.store.repository.MusicDAO;

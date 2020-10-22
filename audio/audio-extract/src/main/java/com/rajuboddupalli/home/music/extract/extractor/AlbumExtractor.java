@@ -1,6 +1,6 @@
 package com.rajuboddupalli.home.music.extract.extractor;
 
-import com.rajuboddupalli.home.music.entity.domain.Album;
+import com.rajuboddupalli.home.domain.entity.music.Album;
 import com.rajuboddupalli.home.music.extract.converter.AlbumConverter;
 import com.rajuboddupalli.home.music.extract.publisher.StoreMessagePublisher;
 import com.rajuboddupalli.home.music.store.repository.MusicDAO;

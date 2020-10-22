@@ -4,8 +4,8 @@ import com.mpatric.mp3agic.ID3v2;
 import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.Mp3File;
 import com.mpatric.mp3agic.UnsupportedTagException;
-import com.rajuboddupalli.home.music.entity.domain.Album;
-import com.rajuboddupalli.home.music.entity.domain.Song;
+import com.rajuboddupalli.home.domain.entity.music.Album;
+import com.rajuboddupalli.home.domain.entity.music.Song;
 import com.rajuboddupalli.home.music.extract.utils.SubDirectoryUtils;
 
 import java.io.IOException;

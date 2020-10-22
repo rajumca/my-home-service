@@ -24,7 +24,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-core:5.1.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.1.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.1.10.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: com.rajuboddupalli:audio-store:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="data-store" />
     <orderEntry type="library" name="Maven: com.mpatric:mp3agic:0.9.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-cassandra:2.1.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.1.9.RELEASE" level="project" />
@@ -41,7 +41,7 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.10" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.10" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.9.10" level="project" />
-    <orderEntry type="library" name="Maven: com.rajuboddupalli:music-objects:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="media-objects" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-cassandra:2.1.11.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:2.1.11.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.datastax.cassandra:cassandra-driver-core:3.6.0" level="project" />

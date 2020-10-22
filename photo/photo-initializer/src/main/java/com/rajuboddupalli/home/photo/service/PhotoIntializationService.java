@@ -19,9 +19,9 @@ public class PhotoIntializationService {
     @Autowired
     private Environment env;
 
-    private String  source = "F:\\Photos\\2019\\Amazon grouped\\manual";
+    private String  source = "F:\\Photos\\Amzon\\Amazon Photos Downloads\\Amazon Photos Downloads\\IRajuX";
 //    private String source="F:\\Photos\\2019\\Amazon Photos Downloads\\IRajuX";
-    private String  destination="F:\\Photos\\2019\\Amazon grouped";
+    private String  destination="F:\\Photos\\Amzon\\grouped";
 
     /*private String source = "D:\\apps\\test\\Phototest\\source";
     private String destination = "D:\\apps\\test\\Phototest\\destination";*/

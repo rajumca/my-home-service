@@ -1,3 +1,4 @@
+/*
 package com.rajuboddupalli.home.music.store;
 
 import org.springframework.boot.SpringApplication;
@@ -9,3 +10,4 @@ public class StoreConfig {
         SpringApplication.run(StoreConfig.class,args);
     }
 }
+*/
