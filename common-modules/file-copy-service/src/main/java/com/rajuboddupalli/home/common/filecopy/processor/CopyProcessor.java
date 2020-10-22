@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rajuboddupalli.home.common.domain.CopyObject;
 import com.rajuboddupalli.home.common.domain.CopyObjectType;
 import com.rajuboddupalli.home.common.filecopy.publisher.ImageStoreMessagePublisher;
+import com.rajuboddupalli.home.common.logger.LoggingUtils;
 import com.rajuboddupalli.home.domain.entity.photo.ImageAudit;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,9 @@ public class CopyProcessor {
         try {
             Path source = Paths.get(copyObject.getSourceFile());
             createIfDirectoryDoesnotExists(copyObject);
-            Files.copy(source, getDestinationPath(copyObject, source), REPLACE_EXISTING);
+            Path destinationPath = getDestinationPath(copyObject, source);
+            LoggingUtils.logInfo("Copying to "+destinationPath.toString());
+            Files.copy(source, destinationPath, REPLACE_EXISTING);
             if (copyObject.isDeleteOriginal()) {
                 Files.delete(source);
             }

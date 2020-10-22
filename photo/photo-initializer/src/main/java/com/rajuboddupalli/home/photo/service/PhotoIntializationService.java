@@ -19,7 +19,7 @@ public class PhotoIntializationService {
     @Autowired
     private Environment env;
 
-    private String  source = "F:\\Photos\\Amzon\\Amazon Photos Downloads\\Amazon Photos Downloads\\IRajuX";
+    private String  source = "F:\\Photos\\Bannu College - Copy";
 //    private String source="F:\\Photos\\2019\\Amazon Photos Downloads\\IRajuX";
     private String  destination="F:\\Photos\\Amzon\\grouped";
 

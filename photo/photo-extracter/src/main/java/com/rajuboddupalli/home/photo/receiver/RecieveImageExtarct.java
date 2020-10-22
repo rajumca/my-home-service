@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.text.NumberFormat;
 import java.util.*;
 
 @Component
@@ -73,18 +74,47 @@ public class RecieveImageExtarct {
     }
 
     private String setAndGetDestinationDirectory(ImageAudit imageAudit) throws ImageProcessingException, IOException {
-        Optional<Calendar> calendarObject = extractCreationDate(imageAudit.getPath());
-        return calendarObject.map(calendar -> {
-            int month = calendar.get(Calendar.MONTH)+1;
-            int year = calendar.get(Calendar.YEAR);
-            imageAudit.setYear(Integer.toString(year));
-            imageAudit.setMonth(Integer.toString(month));
-            imageAudit.setDestination(new StringBuilder(imageAudit.getDestination()).append("\\").append(year).append("\\").append(month).toString());
-            return imageAudit.getDestination();
-        }).orElseGet(() -> {
-            imageAudit.setDestination(new StringBuilder(imageAudit.getDestination()).append("\\").append("manual").toString());
-            return imageAudit.getDestination();
-        });
+        try {
+            Optional<Calendar> calendarObject = extractCreationDate(imageAudit.getPath());
+
+            return calendarObject.map(calendar -> {
+                int month = calendar.get(Calendar.MONTH) + 1;
+                int year = calendar.get(Calendar.YEAR);
+                imageAudit.setYear(Integer.toString(year));
+                imageAudit.setMonth(Integer.toString(month));
+                imageAudit.setDestination(new StringBuilder(imageAudit.getDestination()).append("\\").append(year).append("\\").append(year).append("-").append(String.format("%02d", month)).toString());
+                return imageAudit.getDestination();
+            }).orElseGet(() -> {
+                extractPathFromFileName(imageAudit);
+                return imageAudit.getDestination();
+            });
+
+        } catch (Exception e) {
+            try {
+                extractPathFromFileName(imageAudit);
+                return imageAudit.getDestination();
+            } catch (Exception e2) {
+
+            }
+        }
+        imageAudit.setDestination(new StringBuilder(imageAudit.getDestination()).append("\\").append("manual").toString());
+        return imageAudit.getDestination();
+
+    }
+
+    private void extractPathFromFileName(ImageAudit imageAudit) {
+        String path = Paths.get(imageAudit.getPath()).getFileName().toString();
+        String yearString = path.substring(0, 4);
+        int year = Integer.parseInt(yearString);
+        if (year > 2000 && year <= Calendar.getInstance().get(Calendar.YEAR)) {
+            imageAudit.setYear(yearString);
+        }
+        String monthString = path.substring(5, 7);
+        int month = Integer.parseInt(monthString);
+        if (month > 0 && month < 13) {
+            imageAudit.setMonth(monthString);
+        }
+        imageAudit.setDestination(new StringBuilder(imageAudit.getDestination()).append("\\").append(year).append("\\").append(year).append("-").append(String.format("%02d", month)).toString());
     }
 
     private Optional<Calendar> extractCreationDate(String path) throws ImageProcessingException, IOException {

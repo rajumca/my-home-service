@@ -18,9 +18,6 @@ import java.util.List;
 public class MusicController {
 
     @Autowired
-    private MusicDAO musicDAO;
-
-    @Autowired
     private MusicProcessor musicProcessor;
 
 
