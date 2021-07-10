@@ -21,7 +21,6 @@ public class Album implements Serializable {
     @Column
     private int accessed;
 
-
     @Column
     private String composer;
 

@@ -20,7 +20,7 @@
         <dependency>
             <groupId>com.rajuboddupalli</groupId>
             <artifactId>finance-objects</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>

@@ -23,7 +23,7 @@
         <dependency>
             <groupId>com.rajuboddupalli</groupId>
             <artifactId>finance-objects</artifactId>
-            <version>1.0-SNAPSHOT</version>
+           <version>${project.version}</version>
         </dependency>
 <!--        <dependency>-->
 <!--            <groupId>com.rajuboddupalli</groupId>-->
@@ -33,44 +33,44 @@
         <dependency>
             <groupId>com.rajuboddupalli</groupId>
             <artifactId>audio-extract</artifactId>
-            <version>1.0-SNAPSHOT</version>
+           <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.rajuboddupalli</groupId>
             <artifactId>finance-processor</artifactId>
-            <version>1.0-SNAPSHOT</version>
+           <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.rajuboddupalli</groupId>
             <artifactId>audio-processor</artifactId>
-            <version>1.0-SNAPSHOT</version>
+           <version>${project.version}</version>
 
         </dependency>
         <dependency>
             <groupId>com.rajuboddupalli</groupId>
             <artifactId>photo-initializer</artifactId>
-            <version>1.0-SNAPSHOT</version>
+           <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.rajuboddupalli</groupId>
             <artifactId>file-copy-service</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.rajuboddupalli</groupId>
             <artifactId>common-utils</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>com.rajuboddupalli</groupId>
             <artifactId>photo-extracter</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
 
         </dependency>
         <dependency>
             <groupId>com.rajuboddupalli</groupId>
             <artifactId>data-store</artifactId>
-            <version>1.0-SNAPSHOT</version>
+           <version>${project.version}</version>
 
         </dependency>
     </dependencies>

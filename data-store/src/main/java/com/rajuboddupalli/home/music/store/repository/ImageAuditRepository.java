@@ -5,5 +5,5 @@ import org.springframework.data.cassandra.repository.CassandraRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-interface ImageAuditRepository extends CassandraRepository<ImageAudit,String> {
+public interface ImageAuditRepository extends CassandraRepository<ImageAudit,String> {
 }

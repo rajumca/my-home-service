@@ -6,6 +6,7 @@ import com.rajuboddupalli.home.music.publisher.CopyMessagePublisher;
 import com.rajuboddupalli.home.music.publisher.ExtractMessagePublisher;
 import com.rajuboddupalli.home.music.store.repository.MusicDAO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -28,9 +29,12 @@ public class MusicProcessor {
     @Autowired
     private CopyMessagePublisher copyMessagePublisher;
 
+    @Value("${music.path}")
+    private String musicDirectoryPath;
+
     public void extract() {
         System.out.println("Processor:** " + LocalDateTime.now());
-        Path musicPath = Paths.get("G:\\MUSIC");
+        Path musicPath = Paths.get(musicDirectoryPath);
         try (DirectoryStream<Path> paths = Files.newDirectoryStream(musicPath)) {
             StreamSupport.stream(paths.spliterator(), true).forEach(path -> extractPublisher.publish(path.toString()));
         } catch (IOException e) {
