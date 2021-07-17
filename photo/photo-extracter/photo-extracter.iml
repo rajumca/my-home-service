@@ -11,6 +11,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="common-utils" />
+    <orderEntry type="module" module-name="common-objects" />
+    <orderEntry type="module" module-name="media-objects" />
     <orderEntry type="library" name="Maven: org.springframework.kafka:spring-kafka:2.7.3" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.3.8" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.3.8" level="project" />

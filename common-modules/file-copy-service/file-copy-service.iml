@@ -11,6 +11,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="common-objects" />
+    <orderEntry type="module" module-name="data-store" />
+    <orderEntry type="module" module-name="media-objects" />
+    <orderEntry type="module" module-name="common-utils" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.1.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.3.8" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.3.8" level="project" />

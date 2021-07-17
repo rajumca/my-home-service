@@ -9,6 +9,7 @@ import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 import java.io.Serializable;
+import java.nio.ByteBuffer;
 import java.util.List;
 @Setter
 @Getter
@@ -32,9 +33,11 @@ public class Album implements Serializable {
     @Column
     private int year;
 
-
     @Transient
     private List<Song> songs;
+
+    @Column
+    private ByteBuffer image;
 
 
 }

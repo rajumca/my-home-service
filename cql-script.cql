@@ -56,6 +56,7 @@ CREATE TABLE keyspace1.album (
 	path text,
 	rating int,
 	year int,
+	image blob,
 	PRIMARY KEY (name)
 ) WITH bloom_filter_fp_chance = 0.01
 AND comment = ''
